@@ -11,3 +11,18 @@ def test_chunking_preserves_overlap():
 def test_invalid_overlap_raises():
     with pytest.raises(ValueError):
         chunk_text("hi", chunk_size=5, overlap=5)
+
+
+
+def test_chunking_with_assignment_values():
+    text = (
+        "Employees should use strong passwords to protect company accounts. "
+        "Passwords must contain letters, numbers, and special characters. "
+        "Employees should never share their passwords with other people."
+    )
+
+    chunks = chunk_text(text, chunk_size=50, overlap=15)
+
+    assert len(chunks) > 1
+    assert chunks[0][-15:] == chunks[1][:15]
+    assert all(len(chunk) <= 50 for chunk in chunks)
