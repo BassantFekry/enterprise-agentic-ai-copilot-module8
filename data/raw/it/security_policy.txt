@@ -1,0 +1,2 @@
+Employees must use strong passwords containing uppercase letters, lowercase letters, numbers, and special characters.
+ Passwords must be unique for each account and must never be shared with other employees.

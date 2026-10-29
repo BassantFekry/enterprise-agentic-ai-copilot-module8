@@ -1,0 +1,23 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.pytest_cache/
+.ruff_cache/
+.coverage
+*.log
+.vscode/
+.DS_Store
+# Add private documents and generated indexes to local excludes when needed.
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+# Local RAG index/data
+data/processed/chroma/
+__pycache__/
+.pytest_cache/
+
+!data/raw/it/
+!data/raw/it/security_policy.txt
