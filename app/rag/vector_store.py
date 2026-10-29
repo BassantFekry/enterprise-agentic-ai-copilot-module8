@@ -7,7 +7,7 @@ from app.core.config import get_settings
 DEPARTMENT = {"hr", "accounting", "legal"}
 
 @lru_cache(maxsize=1)
-def get_client()
+def get_client():
     import chromadb
 
     store = Path(get_settings().rag_chroma_path)
